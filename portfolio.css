@@ -1,0 +1,114 @@
+.backdrop {
+  background-image: url('https://media.giphy.com/media/VbQYnizk1UCPZzedxT/source.gif');
+    background-size: cover;
+}
+body {
+  font-family: "VT323", monospace;
+}
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #0a0a0a;
+  position:absolute;
+  height: 1200px;
+  overflow:auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: fuchsia;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #555;
+  color: fuchsia;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #0a0a0a;
+  color: rgb(55, 253, 65);
+  text-shadow: 0 0 10px greenyellow, 0 0 20px greenyellow, 0 0 30px #36bd1c, 0 0 40px #36bd1c, 0 0 50px #36bd1c, 0 0 60px #36bd1c, 0 0 70px #36bd1c;
+  animation: 1s infinite blink;
+}
+@keyframes blink {
+  0%, 15% {
+      opacity: 0;
+  }
+  16%, 100% {
+      opacity: 1;
+  }
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content, footer, div.main-body, .mb-4, .projects {
+  margin-left: 200px;
+  height:auto;
+}
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content, footer, div.main-body, .mb-4, .projects {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+.container-fluid {
+  font-family: "VT323", monospace;
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+
+
+ background-image: url("https://media.giphy.com/media/wVvnpnC5uyX4glRnr3/giphy-downsized-large.gif");
+  background-size:cover;
+
+}
+#header {
+  font-size: 56px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px greenyellow, 0 0 20px greenyellow, 0 0 30px #36bd1c, 0 0 40px #36bd1c, 0 0 50px #36bd1c, 0 0 60px #36bd1c, 0 0 70px #36bd1c;
+  }
+  to {
+    text-shadow: 0 0 20px greenyellow, 0 0 30px greenyellow, 0 0 40px #96f08a, 0 0 50px #96f08a, 0 0 60px #96f08a, 0 0 70px #96f08a, 0 0 80px #96f08a;
+  }
+}
+p, .row {
+  color: greenyellow;
+}
+#send {
+  animation: 1s infinite blink;
+    display: inline-block;
+}
+
+@keyframes blink {
+    0%, 15% {
+        opacity: 0;
+    }
+    16%, 100% {
+        opacity: 1;
+    }
+}
